@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1300" dy="700" grid="1" gridSize="10" guides="1"
+  tooltips="1" connect="1" arrows="1" fold="1" page="1"
+  pageScale="1" pageWidth="1600" pageHeight="700"
+  math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- TITLE -->
+    <mxCell id="title" value="CRAFT â€” System Architecture"
+      style="text;html=1;strokeColor=none;fillColor=none;
+             align=center;verticalAlign=middle;
+             fontSize=16;fontStyle=1;fontColor=#111111;"
+      vertex="1" parent="1">
+      <mxGeometry x="400" y="15" width="700" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â• INPUTS â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="in_label" value="Inputs"
+      style="text;html=1;strokeColor=none;fillColor=none;
+             align=center;fontSize=9;fontStyle=3;fontColor=#1565C0;rotation=-90;"
+      vertex="1" parent="1">
+      <mxGeometry x="10" y="200" width="55" height="20" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="ciq" value="CIQ"
+      style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;
+             fillColor=#BBDEFB;strokeColor=#1565C0;
+             fontSize=12;fontStyle=1;fontColor=#1565C0;"
+      vertex="1" parent="1">
+      <mxGeometry x="30" y="100" width="140" height="55" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="lld" value="LLD"
+      style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;
+             fillColor=#BBDEFB;strokeColor=#1565C0;
+             fontSize=12;fontStyle=1;fontColor=#1565C0;"
+      vertex="1" parent="1">
+      <mxGeometry x="30" y="175" width="140" height="55" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="past" value="Past Configs"
+      style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;
+             fillColor=#BBDEFB;strokeColor=#1565C0;
+             fontSize=12;fontStyle=1;fontColor=#1565C0;"
+      vertex="1" parent="1">
+      <mxGeometry x="30" y="250" width="140" height="55" as="geometry"/>
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â• AGENT ROW â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="isa" value="ISA"
+      style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;
+             fillColor=#C8E6C9;strokeColor=#256029;
+             fontSize=13;fontStyle=1;fontColor=#256029;"
+      vertex="1" parent="1">
+      <mxGeometry x="210" y="175" width="140" height="70" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="dgra" value="DGRA"
+      style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;
+             fillColor=#C8E6C9;strokeColor=#256029;
+             fontSize=13;fontStyle=1;fontColor=#256029;"
+      vertex="1" parent="1">
+      <mxGeometry x="380" y="175" width="140" height="70" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="tda" value="TDA"
+      style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;
+             fillColor=#C8E6C9;strokeColor=#256029;
+             fontSize=13;fontStyle=1;fontColor=#256029;"
+      vertex="1" parent="1">
+      <mxGeometry x="550" y="175" width="140" height="70" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="mta" value="MTA"
+      style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;
+             fillColor=#C8E6C9;strokeColor=#256029;
+             fontSize=13;fontStyle=1;fontColor=#256029;"
+      vertex="1" parent="1">
+      <mxGeometry x="740" y="175" width="140" height="70" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="pvs" value="PVS"
+      style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;
+             fillColor=#C8E6C9;strokeColor=#256029;
+             fontSize=13;fontStyle=1;fontColor=#256029;"
+      vertex="1" parent="1">
+      <mxGeometry x="910" y="175" width="140" height="70" as="geometry"/>
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â• RAG KB & TOOL REGISTRY â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="rag" value="RAG KB"
+      style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;
+             fillColor=#FFF3E0;strokeColor=#E65100;
+             fontSize=13;fontStyle=1;fontColor=#E65100;"
+      vertex="1" parent="1">
+      <mxGeometry x="1100" y="175" width="200" height="70" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="reg" value="Tool Registry"
+      style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;
+             fillColor=#FFF3E0;strokeColor=#E65100;
+             fontSize=13;fontStyle=1;fontColor=#E65100;"
+      vertex="1" parent="1">
+      <mxGeometry x="1100" y="370" width="200" height="70" as="geometry"/>
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â• EXECUTION + OUTPUT â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="exec" value="Execution Engine"
+      style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;
+             fillColor=#E1BEE7;strokeColor=#4A148C;
+             fontSize=13;fontStyle=1;fontColor=#4A148C;"
+      vertex="1" parent="1">
+      <mxGeometry x="210" y="370" width="220" height="70" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="out" value="Config Output"
+      style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;
+             fillColor=#E1BEE7;strokeColor=#4A148C;
+             fontSize=13;fontStyle=1;fontColor=#4A148C;"
+      vertex="1" parent="1">
+      <mxGeometry x="460" y="370" width="220" height="70" as="geometry"/>
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â• FLA â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="fla" value="FLA"
+      style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;
+             fillColor=#FFCDD2;strokeColor=#B71C1C;
+             fontSize=14;fontStyle=1;fontColor=#B71C1C;"
+      vertex="1" parent="1">
+      <mxGeometry x="210" y="530" width="840" height="65" as="geometry"/>
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â• LEGEND / INDEX â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="leg_title" value="Index"
+      style="text;html=1;strokeColor=none;fillColor=none;
+             align=left;fontSize=10;fontStyle=1;fontColor=#111111;"
+      vertex="1" parent="1">
+      <mxGeometry x="1360" y="80" width="200" height="20" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="li1" value="ISA  â€” Inverse Synthesis Agent"
+      style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;
+             fillColor=#C8E6C9;strokeColor=#256029;
+             fontSize=9;fontStyle=0;fontColor=#111111;align=left;spacingLeft=6;"
+      vertex="1" parent="1">
+      <mxGeometry x="1360" y="108" width="220" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="li2" value="DGRA â€” Domain-Grounded Rule Agent"
+      style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;
+             fillColor=#C8E6C9;strokeColor=#256029;
+             fontSize=9;fontColor=#111111;align=left;spacingLeft=6;"
+      vertex="1" parent="1">
+      <mxGeometry x="1360" y="140" width="220" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="li3" value="TDA  â€” Template Discovery Agent"
+      style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;
+             fillColor=#C8E6C9;strokeColor=#256029;
+             fontSize=9;fontColor=#111111;align=left;spacingLeft=6;"
+      vertex="1" parent="1">
+      <mxGeometry x="1360" y="172" width="220" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="li4" value="MTA  â€” Mutation Testing Agent"
+      style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;
+             fillColor=#C8E6C9;strokeColor=#256029;
+             fontSize=9;fontColor=#111111;align=left;spacingLeft=6;"
+      vertex="1" parent="1">
+      <mxGeometry x="1360" y="204" width="220" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="li5" value="PVS  â€” Plan-Verify-Synthesize Loop"
+      style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;
+             fillColor=#C8E6C9;strokeColor=#256029;
+             fontSize=9;fontColor=#111111;align=left;spacingLeft=6;"
+      vertex="1" parent="1">
+      <mxGeometry x="1360" y="236" width="220" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="li6" value="FLA  â€” Feedback Learning Agent"
+      style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;
+             fillColor=#FFCDD2;strokeColor=#B71C1C;
+             fontSize=9;fontColor=#111111;align=left;spacingLeft=6;"
+      vertex="1" parent="1">
+      <mxGeometry x="1360" y="268" width="220" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="li7" value="RAG KB â€” Knowledge Base (RAG)"
+      style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;
+             fillColor=#FFF3E0;strokeColor=#E65100;
+             fontSize=9;fontColor=#111111;align=left;spacingLeft=6;"
+      vertex="1" parent="1">
+      <mxGeometry x="1360" y="300" width="220" height="26" as="geometry"/>
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â• EDGES â€” INPUTS â†’ ISA â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="e_ciq_isa" value=""
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#1565C0;strokeWidth=2;exitX=1;exitY=0.3;entryX=0;entryY=0.3;"
+      edge="1" source="ciq" target="isa" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_lld_isa" value=""
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#1565C0;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;"
+      edge="1" source="lld" target="isa" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_past_isa" value=""
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#1565C0;strokeWidth=2;dashed=1;
+             exitX=1;exitY=0.7;entryX=0;entryY=0.7;"
+      edge="1" source="past" target="isa" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â• EDGES â€” AGENT CHAIN â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="e_isa_dgra" value="36 flagged"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#256029;strokeWidth=2;
+             fontSize=9;fontStyle=2;fontColor=#256029;
+             exitX=1;exitY=0.5;entryX=0;entryY=0.5;"
+      edge="1" source="isa" target="dgra" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_dgra_tda" value="91.4%"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#256029;strokeWidth=2;
+             fontSize=9;fontStyle=2;fontColor=#256029;
+             exitX=1;exitY=0.5;entryX=0;entryY=0.5;"
+      edge="1" source="dgra" target="tda" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_tda_mta" value=""
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#256029;strokeWidth=2;
+             exitX=1;exitY=0.5;entryX=0;entryY=0.5;"
+      edge="1" source="tda" target="mta" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_mta_pvs" value="hardened"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#256029;strokeWidth=2;
+             fontSize=9;fontStyle=2;fontColor=#256029;
+             exitX=1;exitY=0.5;entryX=0;entryY=0.5;"
+      edge="1" source="mta" target="pvs" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â• DGRA â†” RAG (top loop) â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="e_dgra_rag" value="query"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#E65100;strokeWidth=1.8;dashed=1;
+             fontSize=9;fontStyle=2;fontColor=#E65100;
+             exitX=0.5;exitY=0;entryX=0.5;entryY=0;"
+      edge="1" source="dgra" target="rag" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="450" y="100"/>
+          <mxPoint x="1200" y="100"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e_rag_dgra" value="retrieve"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#E65100;strokeWidth=1.8;
+             fontSize=9;fontStyle=2;fontColor=#E65100;
+             exitX=0;exitY=0.6;entryX=1;entryY=0.6;"
+      edge="1" source="rag" target="dgra" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- PVS â†’ Tool Registry -->
+    <mxCell id="e_pvs_reg" value="register"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#E65100;strokeWidth=1.8;dashed=1;
+             fontSize=9;fontStyle=2;fontColor=#E65100;
+             exitX=0.5;exitY=1;entryX=0.5;entryY=0;"
+      edge="1" source="pvs" target="reg" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="980" y="320"/>
+          <mxPoint x="1200" y="320"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- MTA + PVS â†’ Execution Engine -->
+    <mxCell id="e_mta_exec" value=""
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#4A148C;strokeWidth=2;
+             exitX=0.3;exitY=1;entryX=0.6;entryY=0;"
+      edge="1" source="mta" target="exec" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_pvs_exec" value=""
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#4A148C;strokeWidth=2;
+             exitX=0.1;exitY=1;entryX=0.8;entryY=0;"
+      edge="1" source="pvs" target="exec" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Execution Engine â†’ Config Output -->
+    <mxCell id="e_exec_out" value=""
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#4A148C;strokeWidth=2;
+             exitX=1;exitY=0.5;entryX=0;entryY=0.5;"
+      edge="1" source="exec" target="out" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- Config Output â†’ FLA -->
+    <mxCell id="e_out_fla" value="corrections"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#B71C1C;strokeWidth=2;
+             fontSize=9;fontStyle=2;fontColor=#B71C1C;
+             exitX=0.5;exitY=1;entryX=0.5;entryY=0;"
+      edge="1" source="out" target="fla" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- FLA â†’ ISA (left feedback loop) -->
+    <mxCell id="e_fla_isa" value="rule updates"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#B71C1C;strokeWidth=2;dashed=1;
+             fontSize=9;fontStyle=2;fontColor=#B71C1C;
+             exitX=0;exitY=0.5;entryX=0;entryY=1;"
+      edge="1" source="fla" target="isa" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="160" y="562"/>
+          <mxPoint x="160" y="210"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- FLA â†’ RAG (right feedback loop) -->
+    <mxCell id="e_fla_rag" value="KB update"
+      style="edgeStyle=orthogonalEdgeStyle;html=1;
+             strokeColor=#B71C1C;strokeWidth=2;dashed=1;
+             fontSize=9;fontStyle=2;fontColor=#B71C1C;
+             exitX=1;exitY=0.5;entryX=1;entryY=1;"
+      edge="1" source="fla" target="rag" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1330" y="562"/>
+          <mxPoint x="1330" y="210"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+  </root>
+</mxGraphModel>
