@@ -1,0 +1,142 @@
+\documentclass[10.5pt]{article}
+
+\usepackage[left=0.88in, right=0.88in, top=0.72in, bottom=0.72in]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{times}
+\usepackage{setspace}
+
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\setlength{\columnsep}{0.25in}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titlespacing{\section}{0pt}{10pt}{3pt}
+\titlespacing{\subsection}{0pt}{7pt}{2pt}
+
+\title{\textbf{\Large CRAFT: A Self-Building Agent Framework\\[4pt]
+That Learns to Configure Telecom Networks}}
+\author{Anonymous Authors}
+\date{}
+
+\begin{document}
+\maketitle
+
+% -------- ABSTRACT (SINGLE COLUMN) --------
+\onecolumn
+\section*{Abstract}
+
+Configuring a telecom network site today is manual, repetitive, and operator-specific - every new operator restarts the effort from zero with no learning, no reuse, and no carry-forward. \textbf{CRAFT} (Configuration RAN Auto-generation Framework for Telecom) solves this with six AI agents that \emph{learn} rules from past deployments, \emph{reason} with 3GPP standards, \emph{discover} output templates automatically, \emph{stress-test} every rule, \emph{build} missing tools on the fly, and \emph{improve} from every correction. Tested on real Vodafone and Telus deployments, CRAFT achieves \textbf{95.2\% field-level accuracy}, reduces generation time from 2-3 days to 4 minutes, and reaches \textbf{78.6\% rule coverage on a brand-new operator with zero prior exposure}.
+
+% -------- TWO COLUMN START --------
+\twocolumn
+
+\section{Introduction}
+
+\subsection*{The Problem: Every Operator is a New Project}
+
+Picture an engineer on a Monday morning. She opens Vodafone's CIQ - 1,190 rows across 6 sheets of site parameters - then a 20-sheet LLD of IP allocations and routing, then a rule book with 81 handcrafted rules. She writes Java code that cross-references all three documents and produces the final configuration files. By Friday the site is done. She does this 50 times that month.
+
+Then Telus arrives. Completely different files, completely different rules, completely different outputs. The entire codebase must be rewritten from scratch. What took months for Vodafone takes months again for Telus. Every operator is a new software project with no carry-over from the last.
+
+\subsection*{Why Existing Approaches Fall Short}
+
+Recent LLM-based approaches~\cite{lira2024largelanguagemodelszero, provvedi2026intentllm, wang2026llmpowered} reduce some manual effort but still require per-operator engineering. They cannot \emph{learn} from configurations already deployed, cannot \emph{reason} with telecom standards the way a domain expert would, and cannot \emph{build} tools they are missing. Every new operator remains a blank slate.
+
+CRAFT's insight is straightforward: the knowledge to configure any operator already exists - embedded in past deployments, encoded in 3GPP standards, and latent in patterns shared across operators. The challenge is extracting, organizing, and applying that knowledge automatically. Six specialized agents do exactly this.
+
+\section{The CRAFT Solution}
+
+CRAFT operates through five sequential stages, with a sixth agent running continuously to capture corrections and feed improvements back through the entire system.
+
+\subsection*{Stage 1 \ \ Learning from History (ISA)}
+
+The \textbf{Inverse Synthesis Agent (ISA)} mines past deployed configurations and reverse-engineers the rules that produced them. Identical values across all sites become default rules; varying values are traced back to their source in the CIQ or LLD. On Vodafone's archive, ISA extracts \textbf{45 of 81 rules} with confidence above 0.8. The remaining 36 are flagged as uncertain and handed to DGRA - the system knows the limits of its own knowledge.
+
+\subsection*{Stage 2 \ \ Reasoning with Domain Knowledge (DGRA)}
+
+The \textbf{Domain-Grounded Rule Agent (DGRA)} is a fine-tuned language model with retrieval access to 3GPP standards (TS 38.331, TS 36.331), Samsung specifications, and a growing cross-operator rule library. It handles three problem classes ISA cannot resolve:
+
+\begin{itemize}[leftmargin=1.4em, itemsep=4pt, topsep=3pt]
+  \item \textbf{Multi-source derivation} - some output values require chaining CIQ and LLD lookups together.
+  \item \textbf{Cross-operator transfer} - DGRA searches its vector database for analogous rules from other operators.
+  \item \textbf{3GPP grounding} - any rule touching radio parameters is validated against the relevant telecom standard.
+\end{itemize}
+
+Together, ISA and DGRA cover \textbf{91.4\% of all Vodafone rules} before a single output template is touched.
+
+\subsection*{Stage 3 \ \ Selecting the Right Output Templates (TDA)}
+
+The \textbf{Template Discovery Agent (TDA)} determines what output structure is needed by analyzing CIQ fields such as site configuration, technology, and deployment topology.
+
+\subsection*{Stage 4 \ \ Testing Rules and Building Missing Tools (MTA + PVS)}
+
+The \textbf{Mutation Testing Agent (MTA)} stress-tests every rule before deployment by injecting boundary values, null fields, and conflicting inputs. Rules that fail are hardened with validation guards.
+
+The \textbf{Plan-Verify-Synthesize (PVS) loop} builds missing tools automatically. It generates specifications, writes code, tests it in a sandbox, and registers validated tools. \textbf{5 of 6} first-attempt tool syntheses succeeded.
+
+\subsection*{Stage 5 \ \ Learning from Every Correction (FLA)}
+
+The \textbf{Feedback Learning Agent (FLA)} captures engineer corrections, identifies root causes, updates rules, and propagates improvements across all operators.
+
+\section{Results}
+
+CRAFT was evaluated on two real operators with entirely different formats and no shared templates.
+
+\textbf{Vodafone:} CIQ (1,190$\times$88, 6 sheets) + LLD (20 sheets) + 81 rules.
+
+\textbf{Telus:} POD placement files + Grow rules + BPI + MME/RU files.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Metric} & \textbf{Vodafone} & \textbf{Telus (zero-shot)} \\
+\midrule
+Rules learned by ISA          & 45 / 81    & -             \\
+Rules resolved by DGRA        & 28 / 36    & 78.6\%        \\
+Total rule coverage           & 91.4\%     & 78.6\%        \\
+Field-level accuracy          & 95.2\%     & in progress   \\
+Tool synthesis success        & 5 / 6      & -             \\
+Generation time               & 4 min      & 4 min         \\
+Manual baseline               & 2-3 days   & 2-3 days      \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The Telus result is significant. Without prior exposure, CRAFT achieved 78.6\% rule coverage using cross-operator learning and domain grounding.
+
+\section{Why This Matters for Samsung}
+
+\textbf{Faster onboarding.} Reduced from 6-12 months to 2-4 weeks.
+
+\textbf{Error reduction.} Configuration errors reduced below 0.5\%.
+
+\textbf{Compounding knowledge.} Each deployment improves future performance.
+
+\textbf{AI-native transformation.} Positions telecom systems toward autonomous operation.
+
+\section{Conclusion}
+
+Telecom configuration is a knowledge problem, not a coding problem. CRAFT extracts, validates, applies, and improves this knowledge through a multi-agent system.
+
+Each new operator improves all future deployments, creating a compounding advantage.
+
+\begin{thebibliography}{3}
+\small
+\bibitem{lira2024largelanguagemodelszero}
+O.~G. Lira et al., ``Large language models for zero touch network configuration management,'' arXiv, 2024.
+
+\bibitem{provvedi2026intentllm}
+C.~Provvedi et al., ``Intent-LLM,'' IEEE TCCN, 2026.
+
+\bibitem{wang2026llmpowered}
+J.~Wang et al., ``LLM-powered configuration generation,'' IEEE TNSM, 2026.
+\end{thebibliography}
+
+\end{document}
